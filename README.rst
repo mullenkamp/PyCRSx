@@ -1,9 +1,13 @@
-PyCRS
+PyCRSx
 =====
 
-PyCRS is a pure Python GIS package for reading, writing, and converting
+PyCRSx is a modified clone of the `PyCRS package <https://github.com/karimbahgat/PyCRS>`_ to make it compatible on Python 3.5 and 3.6.
+
+PyCRSx is a pure Python GIS package for reading, writing, and converting
 between various common coordinate reference system (CRS) string and data
 source formats.
+
+Below is the description from the original PyCRS package.
 
 Introduction
 ------------
@@ -64,14 +68,20 @@ Pure Python, no dependencies.
 Installing it
 -------------
 
-PyCRS is installed with pip from the commandline:
+PyCRSx is installed with pip from the commandline:
 
 ::
 
-    pip install pycrs
+    pip install pycrsx
 
-It also works to just place the "pycrs" package folder in an importable
+It also works to just place the "pycrsx" package folder in an importable
 location like "PythonXX/Lib/site-packages".
+
+PyCRSx can also be installed via conda:
+
+::
+
+   conda install -c mullenkamp pycrsx
 
 Example Usage
 -------------
@@ -80,7 +90,7 @@ Begin by importing the pycrs module:
 
 ::
 
-    import pycrs
+    import pycrsx
 
 Reading
 ~~~~~~~
@@ -92,20 +102,20 @@ other file. PyCRS has a convenience function for doing that:
 
 ::
 
-    fromcrs = pycrs.loader.from_file("path/to/shapefilename.prj")
+    fromcrs = pycrsx.loader.from_file("path/to/shapefilename.prj")
 
 The same function also supports reading the crs from GeoJSON files:
 
 ::
 
-    fromcrs = pycrs.loader.from_file("path/to/geojsonfile.json")
+    fromcrs = pycrsx.loader.from_file("path/to/geojsonfile.json")
 
 If your crs is not defined in a file there are also functions for that.
 For instance if you know the url where the crs is defined you can do:
 
 ::
 
-    fromcrs = pycrs.loader.from_url("www.somesite.com/someproj")
+    fromcrs = pycrsx.loader.from_url("www.somesite.com/someproj")
 
 Or if you are provided with the actual string representation of the crs,
 given by a web service for instance, you can load it using the
@@ -114,7 +124,7 @@ load the crs type for you:
 
 ::
 
-    fromcrs = pycrs.parser.from_unknown_text(somecrs_string)
+    fromcrs = pycrsx.parser.from_unknown_text(somecrs_string)
 
 Converting
 ~~~~~~~~~~
@@ -136,7 +146,7 @@ PyProj expects:
 
 ::
 
-    tocrs = pycrs.parser.from_esri_code(54030) # Robinson projection from esri code
+    tocrs = pycrsx.parser.from_esri_code(54030) # Robinson projection from esri code
     tocrs_proj4 = tocrs.to_proj4()
 
 With the source and target projections defined in the proj4 crs format,
