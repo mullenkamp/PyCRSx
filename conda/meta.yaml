@@ -1,6 +1,6 @@
 {% set name = "pycrsx" %}
-{% set version = "1.0.0" %}
-{% set sha256 = "86173a4c245d243d2bc8022c77ca0dda48968119c5896e8de32d00a0f4d71b78" %}
+{% set version = "1.0.1" %}
+{% set sha256 = "1a0dce7d1c05c35dd27fe8fa5d1ba33df2ebe190e43835a8db199144608601ab" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.

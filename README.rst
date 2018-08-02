@@ -1,5 +1,5 @@
 PyCRSx
-=====
+=======
 
 PyCRSx is a modified clone of the `PyCRS package <https://github.com/karimbahgat/PyCRS>`_ to make it compatible on Python 3.5 and 3.6.
 
@@ -10,7 +10,7 @@ source formats.
 Below is the description from the original PyCRS package.
 
 Introduction
-------------
+-------------
 
 Python should have a standalone GIS library focused solely on coordinate
 reference system metadata. That is, a library focused on the various
